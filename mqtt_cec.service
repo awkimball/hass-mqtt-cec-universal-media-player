@@ -1,12 +1,12 @@
 [Unit]
-Description=MQTT based HDMI-CEC controller for Home Assistant written in python
+Description=Python based Universal Media Player client for Home Assistant and any CEC compliant A/V Receiver
 
 [Service]
 # Command to execute when the service is started
-ExecStart=/usr/bin/python3 /home/pi/mqtt-cec-appliance/stereo.py
+ExecStart=/usr/bin/python3 /home/pi/hass-mqtt-cec-universal-media-player/stereo.py
 Environment=PYTHONUNBUFFERED=1
-StandardOutput=file:/home/pi/mqtt-cec-appliance/mqtt_cec.log
-WorkingDirectory=/home/pi/mqtt-cec-appliance/
+StandardOutput=file:/home/pi/hass-mqtt-cec-universal-media-player/mqtt_cec.log
+WorkingDirectory=/home/pi/hass-mqtt-cec-universal-media-player/
 Restart=on-failure
 [Install]
 WantedBy=default.target
